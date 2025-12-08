@@ -1,0 +1,32 @@
+{
+    "id": "E349FD9D",
+    "path": "~/ail-website/publications.qmd",
+    "project_path": "publications.qmd",
+    "type": "quarto_markdown",
+    "hash": "0",
+    "contents": "",
+    "dirty": true,
+    "created": 1765124775528.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "rmdVisualMode": "true",
+        "rmdVisualWrapConfigured": "true",
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "49,0",
+        "scrollLine": "0",
+        "docOutlineVisible": "1",
+        "rmdVisualCollapsedChunks": "",
+        "rmdVisualModeLocation": "1545:72.80000305175781"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1765144733,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1765144733327,
+    "read_only": false,
+    "read_only_alternatives": []
+}

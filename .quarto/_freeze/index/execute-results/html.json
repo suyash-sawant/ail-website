@@ -1,0 +1,17 @@
+{
+  "hash": "6fef0c2fe5927c44a3cc2661e332dd4f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Suyash Sawant\"\nsubtitle: \"Animal Communication • Behavioral Ecology • Bioacoustics • Mixed-Species Flocks\"\nformat: html\ntoc: true\n---\n\n## Welcome\n\nI am a PhD student at the University of Florida studying avian vocal communication, mixed-species flocks, and ecological complexity.\n\nThis website hosts my: - Field stories\\\n- Research summaries\\\n- Publications\\\n- Datasets\\\n- Presentations\\\n- Media & photos\n\nThis is a Quarto website.\n\nTo learn more about Quarto websites visit <https://quarto.org/docs/websites>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
