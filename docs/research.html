@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Research Themes – Avian Information Landscapes</title>
+<title>Research – Avian Information Landscapes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Research Themes</h1>
+<h1 class="title">Research</h1>
 </div>
 
 
@@ -144,118 +144,205 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- ======================  PAGE-LEVEL CSS  ====================== -->
 <style>
-.feature-row {
+#title-block-header h1,
+.quarto-title h1,
+.title h1 {
+  text-align: center;
+}
+
+/* Full-width sections */
+.research-hero,
+.research-page {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+/* Top species/systems panel */
+.research-hero {
+  background-color: #f4efe4;
+  color: #111;
+  padding: 2rem 4rem 3rem 4rem;
+}
+
+.hero-systems {
   display: grid;
-  grid-template-columns: 1fr 1fr;  /* two equal-width columns */
-  column-gap: 2rem;               /* spacing between columns */
-  margin-bottom: 3rem;
-  align-items: start;
+  grid-template-columns: repeat(2, minmax(360px, 620px));
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-/* normal layout: text left, image right */
-.feature-text-left {
-  grid-column: 1;
-}
-.feature-img-right {
-  grid-column: 2;
+.system-card {
+  min-height: auto;
 }
 
-/* reversed layout: image left, text right */
-.feature-img-left {
-  grid-column: 1;
-}
-.feature-text-right {
-  grid-column: 2;
-}
-
-.feature-img img {
-  max-width: 100%;
+.system-composite-img {
+  width: 100%;
   height: auto;
-  border-radius: 8px;
+  display: block;
+}
+
+/* Research themes panel */
+.research-page {
+  background-color: #5f705f;
+  color: white;
+  padding: 2.5rem 0 3rem 0;
+}
+
+.research-themes {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.8rem;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 3.5rem;
+}
+
+.theme-card {
+  text-align: center;
+}
+
+.theme-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 2px solid #111;
+  background-color: #f4efe4;
+}
+
+.theme-card h3 {
+  font-size: 1rem;
+  margin: 0.8rem 0 0.4rem 0;
+  color: white;
+  line-height: 1.1;
+
+  text-align: center;
+}
+
+.theme-card p {
+  font-size: 0.78rem;
+  color: #f4efe4;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.theme-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.theme-link:hover .theme-card {
+  transform: translateY(-5px);
+  transition: 0.2s ease;
+}
+
+.theme-link:hover img {
+  filter: brightness(1.05);
+}
+
+.theme-card {
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.theme-link:hover .theme-card {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 1100px) {
+  .hero-systems {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+    gap: 2rem;
+  }
+
+  .research-themes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .research-hero {
+    padding: 1.5rem;
+  }
+
+  .research-themes {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 1.5rem;
+  }
 }
 </style>
-<hr>
-<!-- ======================  BLOCK 1: AVIAN VOCAL COMPLEXITY  ====================== -->
-<div class="feature-row">
-<section id="avian-vocal-complexity" class="level2 feature-text">
-<h2 class="anchored" data-anchor-id="avian-vocal-complexity">Avian Vocal Complexity</h2>
-<section id="what-is-vocal-complexity-in-birds" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-vocal-complexity-in-birds">What is Vocal Complexity in Birds?</h3>
-<p>Coming soon…</p>
-</section>
-<section id="quantifying-vocal-complexity" class="level3">
-<h3 class="anchored" data-anchor-id="quantifying-vocal-complexity">Quantifying Vocal Complexity</h3>
-<p>Coming soon…</p>
-</section>
-<section id="bird-songs-vs.-human-linguistics" class="level3">
-<h3 class="anchored" data-anchor-id="bird-songs-vs.-human-linguistics">Bird Songs vs.&nbsp;Human Linguistics</h3>
-<p>Coming soon…</p>
-</section>
-</section>
-<div class="feature-img">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/tuti.jpg" class="img-fluid figure-img"></p>
-<figcaption>Tufted Titmouse <em>Baeolophus bicolor</em></figcaption>
-</figure>
+<div class="research-hero">
+  <div class="hero-systems">
+
+    <div class="system-card">
+      <img src="images/temperate-forest-fieldwork.jpg" class="system-composite-img" alt="Temperate hardwood forest and Tufted Titmouse">
+    </div>
+
+    <div class="system-card">
+      <img src="images/tropical-shola-fieldwork.jpg" class="system-composite-img" alt="Tropical Shola forest and White-bellied Sholakili">
+    </div>
+
+  </div>
 </div>
-</div>
-</div>
-<hr>
-<!-- ======================  BLOCK 2: MIXED-SPECIES FLOCK DYNAMICS (IMAGE LEFT)  ====================== -->
-<div class="feature-row reverse">
-<section id="mixed-species-flocks" class="level2 feature-text">
-<h2 class="anchored" data-anchor-id="mixed-species-flocks">Mixed-Species Flocks</h2>
-<section id="species-roles-and-interspecific-interactions" class="level3">
-<h3 class="anchored" data-anchor-id="species-roles-and-interspecific-interactions">Species Roles and Interspecific Interactions</h3>
-<p>Coming soon…</p>
-</section>
-<section id="vocal-communication-and-social-dynamics" class="level3">
-<h3 class="anchored" data-anchor-id="vocal-communication-and-social-dynamics">Vocal Communication and Social Dynamics</h3>
-<p>Coming soon…</p>
-</section>
-<section id="flocks-across-gradients" class="level3">
-<h3 class="anchored" data-anchor-id="flocks-across-gradients">Flocks Across Gradients</h3>
-<p>Coming soon…</p>
-</section>
-</section>
-<div class="feature-img">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/mixed-flocks.jpg" class="img-fluid figure-img" width="1600"></p>
-<figcaption>Studying Mixed-species flocks in Florida</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-<!-- ======================  BLOCK 3: CULTURAL EVOLUTION OF BIRDSONGS  ====================== -->
-<div class="feature-row">
-<section id="songs-of-sholakili" class="level2 feature-text">
-<h2 class="anchored" data-anchor-id="songs-of-sholakili">Songs of Sholakili</h2>
-<section id="song-complexity-and-repertoire-size" class="level3">
-<h3 class="anchored" data-anchor-id="song-complexity-and-repertoire-size">Song Complexity and Repertoire Size</h3>
-<p>Coming soon…</p>
-</section>
-<section id="song-consistency-and-sharing" class="level3">
-<h3 class="anchored" data-anchor-id="song-consistency-and-sharing">Song Consistency and Sharing</h3>
-<p>Coming soon…</p>
-</section>
-<section id="cultural-and-genetic-variation" class="level3">
-<h3 class="anchored" data-anchor-id="cultural-and-genetic-variation">Cultural and Genetic Variation</h3>
-<p>Coming soon…</p>
-</section>
-</section>
-<div class="feature-img">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/cultural-evolution.jpg" class="img-fluid figure-img" width="1600"></p>
-<figcaption>White-bellied Sholakili <em>Sholicola albiventris</em></figcaption>
-</figure>
-</div>
-</div>
+
+<div class="research-page">
+  <div class="research-themes">
+
+    <a href="natural-history.html" class="theme-link">
+      <div class="theme-card">
+        <img src="images/Image-temp.jpg" alt="Natural History">
+        <h3 class="anchored">Natural History</h3>
+        <p>What behaviors and interactions shape communication in the wild?</p>
+      </div>
+    </a>
+
+    <a href="evolution-birdsong.html" class="theme-link">
+      <div class="theme-card">
+        <img src="images/evolution-birdsong.jpg" alt="Evolution of Birdsong">
+        <h3 class="anchored">Evolution of Birdsong</h3>
+        <p>How do birdsongs vary across species, populations, and environmental gradients?</p>
+      </div>
+    </a>
+
+    <a href="structural-vocal-complexity.html" class="theme-link">
+      <div class="theme-card">
+        <img src="images/Image-temp.jpg" alt="Structural Vocal Complexity">
+        <h3 class="anchored">Structural Vocal Complexity</h3>
+        <p>What makes avian vocalizations structurally complex?</p>
+      </div>
+    </a>
+
+    <a href="functional-vocal-complexity.html" class="theme-link">
+      <div class="theme-card">
+        <img src="images/functional-complexity.jpg" alt="Functional Vocal Complexity">
+        <h3 class="anchored">Functional Vocal Complexity</h3>
+        <p>How do different signals convey information across contexts?</p>
+      </div>
+    </a>
+
+    <a href="avian-information-landscapes.html" class="theme-link">
+      <div class="theme-card">
+        <img src="images/information-landscapes.jpg" alt="Avian Information Landscapes">
+        <h3 class="anchored">Avian Information<br>Landscapes</h3>
+        <p>How does information flow within avian communities?</p>
+      </div>
+    </a>
+
+    <a href="mixed-species-flocks-social-interactions.html" class="theme-link">
+      <div class="theme-card">
+        <img src="images/social-interactions.jpg" alt="Mixed-species Flock Social Interactions">
+        <h3 class="anchored">Mixed-species Flocks<br>Social Interactions</h3>
+        <p>What drives the organization and stability of bird flocks?</p>
+      </div>
+    </a>
+
+  </div>
 </div>
 
 

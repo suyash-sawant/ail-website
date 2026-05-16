@@ -47,7 +47,7 @@ This website hosts my:
 :::
 
 ::: home-img
-![](images/clipboard-289879888.jpeg){width="32cm"}
+![](images/Suyash_Titmouse.jpg)
 :::
 :::::
 

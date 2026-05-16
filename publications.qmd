@@ -1,75 +1,178 @@
 ---
 title: "Publications"
+format: html
 ---
 
-Below are my publications organized by year.
+```{=html}
+<style>
+#title-block-header h1,
+.quarto-title h1,
+.title h1 {
+  text-align: center;
+}
 
-------------------------------------------------------------------------
+.publications-page {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-color: #f4efe4;
+  padding: 2rem 0 4rem 0;
+}
 
-## 2025
+.publications-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
 
-6.  Arvind, C.; **Sawant, S**.; Srinivasan, R.; Arpitha; G.P.; Goyal, N.; Warudkar, A.; & Robin, V. V. (November 2025).\
-    *Distinct, asynchronous processes underlie cultural and genetic variation in a bird species with complex song repertoires.*\
-    **bioRxiv**. <https://doi.org/10.1101/2025.11.02.684965>\
+.year-heading {
+  background-color: #5f705f;
+  color: white;
+  padding: 0.6rem 1rem;
+  margin: 2rem 0 1rem 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
 
-    ::: {.altmetric-embed data-badge-type="donut" data-badge-details="right" data-doi="10.1101/2025.11.02.684965"}
-    :::
+.pub-card {
+  background-color: white;
+  border-left: 6px solid #5f705f;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
 
-------------------------------------------------------------------------
+.pub-number {
+  font-weight: 800;
+  color: #5f705f;
+  margin-right: 0.35rem;
+}
 
-5.  **Sawant, S.**; Arvind, C.; Joshi, V.; Dutta, I.; & Robin, V. V. (August 2025).\
-    *Linguistic Rules of Syntax and Sharing in the Complex Songs of a Tropical Passerine.*\
-    **bioRxiv**. <https://doi.org/10.1101/2025.07.31.666818>\
+.pub-title {
+  font-style: italic;
+  font-size: 1.05rem;
+  margin: 0.35rem 0;
+}
 
-    ::: {.altmetric-embed data-badge-type="donut" data-badge-details="right" data-doi="10.1101/2025.07.31.666818"}
-    :::
+.pub-journal {
+  font-weight: 700;
+}
 
-------------------------------------------------------------------------
+.pub-link a {
+  color: #5f705f;
+  font-weight: 700;
+  text-decoration: none;
+}
 
-## 2024
+.pub-link a:hover {
+  text-decoration: underline;
+}
 
-4.  Kahl, S.; Denton, T.; Klinck, H.; Ramesh, V.; Joshi, V.; Srivathsa, M.; Anand, A.; Arvind, C.; Harikrishnan, C. P.; **Sawant, S.**; Robin, V. V.; Glotin, H.; Goëau, H.; Vellinga, W. P.; Planqué, R.; Joly, A. (September 2024).\
-    *Overview of BirdCLEF 2024: Acoustic identification of under-studied bird species in the Western Ghats.*\
-    **Working Notes of CLEF**. <https://ceur-ws.org/Vol-3740/>
+.pub-meta {
+  margin-top: 0.7rem;
+}
 
-<!-- CEUR preprints lack DOIs, so Altmetric cannot generate a badge -->
+@media (max-width: 700px) {
+  .publications-container {
+    padding: 0 1.2rem;
+  }
 
-------------------------------------------------------------------------
-
-## 2022
-
-3.  **Sawant, S.**; Arvind, C.; Joshi, V.; & Robin, V. V. (February 2022).\
-    *Spectrogram cross-correlation can be used to measure the complexity of bird vocalizations.*\
-    **Methods in Ecology and Evolution**. <https://doi.org/10.1111/2041-210X.13765>\
-
-    ::: {.altmetric-embed data-badge-type="donut" data-badge-details="right" data-doi="10.1111/2041-210X.13765"}
-    :::
-
-------------------------------------------------------------------------
-
-## 2021
-
-2.  **Sawant, S.**; Arvind, C.; Joshi, V.; & Robin, V. V. (December 2021).\
-    *Song Richness Index: A measure to understand the diversity and repetition of notes in a birdsong.*\
-    **bioRxiv**. <https://doi.org/10.1101/2021.12.18.472638>\
-
-    ::: {.altmetric-embed data-badge-type="donut" data-badge-details="right" data-doi="10.1101/2021.12.18.472638"}
-    :::
-
-------------------------------------------------------------------------
-
-## 2019
-
-1.  **Sawant, S.** (June 2019).\
-    *Grasshopper Warbler Locustella naevia in Andhra Pradesh.*\
-    **Indian BIRDS.** <http://indianbirds.in/pdfs/IB_15_2_Sawant_GrasshopperWarbler.pdf>
-
-<!-- No DOI, so no badge available -->
-
-------------------------------------------------------------------------
-
-<!-- LOAD ALTMETRIC SCRIPT (only once per page) -->
+  .pub-card {
+    padding: 1rem;
+  }
+}
+</style>
+```
 
 ```{=html}
-<script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"</script>
+<div class="publications-page">
+  <div class="publications-container">
+
+    <div class="year-heading">2025</div>
+
+    <div class="pub-card">
+      <p>
+        <span class="pub-number">6.</span>
+        Arvind, C.; <strong>Sawant, S.</strong>; Srinivasan, R.; Arpitha, G. P.; Goyal, N.; Warudkar, A.; & Robin, V. V. (November 2025).
+      </p>
+      <p class="pub-title">Distinct, asynchronous processes underlie cultural and genetic variation in a bird species with complex song repertoires.</p>
+      <p><span class="pub-journal">bioRxiv.</span></p>
+      <p class="pub-link"><a href="https://doi.org/10.1101/2025.11.02.684965" target="_blank">https://doi.org/10.1101/2025.11.02.684965</a></p>
+      <div class="pub-meta">
+        <div class="altmetric-embed" data-badge-type="donut" data-badge-details="right" data-doi="10.1101/2025.11.02.684965"></div>
+      </div>
+    </div>
+
+    <div class="pub-card">
+      <p>
+        <span class="pub-number">5.</span>
+        <strong>Sawant, S.</strong>; Arvind, C.; Joshi, V.; Dutta, I.; & Robin, V. V. (August 2025).
+      </p>
+      <p class="pub-title">Linguistic Rules of Syntax and Sharing in the Complex Songs of a Tropical Passerine.</p>
+      <p><span class="pub-journal">bioRxiv.</span></p>
+      <p class="pub-link"><a href="https://doi.org/10.1101/2025.07.31.666818" target="_blank">https://doi.org/10.1101/2025.07.31.666818</a></p>
+      <div class="pub-meta">
+        <div class="altmetric-embed" data-badge-type="donut" data-badge-details="right" data-doi="10.1101/2025.07.31.666818"></div>
+      </div>
+    </div>
+
+    <div class="year-heading">2024</div>
+
+    <div class="pub-card">
+      <p>
+        <span class="pub-number">4.</span>
+        Kahl, S.; Denton, T.; Klinck, H.; Ramesh, V.; Joshi, V.; Srivathsa, M.; Anand, A.; Arvind, C.; Harikrishnan, C. P.; <strong>Sawant, S.</strong>; Robin, V. V.; Glotin, H.; Goëau, H.; Vellinga, W. P.; Planqué, R.; Joly, A. (September 2024).
+      </p>
+      <p class="pub-title">Overview of BirdCLEF 2024: Acoustic identification of under-studied bird species in the Western Ghats.</p>
+      <p><span class="pub-journal">Working Notes of CLEF.</span></p>
+      <p class="pub-link"><a href="https://ceur-ws.org/Vol-3740/" target="_blank">https://ceur-ws.org/Vol-3740/</a></p>
+    </div>
+
+    <div class="year-heading">2022</div>
+
+    <div class="pub-card">
+      <p>
+        <span class="pub-number">3.</span>
+        <strong>Sawant, S.</strong>; Arvind, C.; Joshi, V.; & Robin, V. V. (February 2022).
+      </p>
+      <p class="pub-title">Spectrogram cross-correlation can be used to measure the complexity of bird vocalizations.</p>
+      <p><span class="pub-journal">Methods in Ecology and Evolution.</span></p>
+      <p class="pub-link"><a href="https://doi.org/10.1111/2041-210X.13765" target="_blank">https://doi.org/10.1111/2041-210X.13765</a></p>
+      <div class="pub-meta">
+        <div class="altmetric-embed" data-badge-type="donut" data-badge-details="right" data-doi="10.1111/2041-210X.13765"></div>
+      </div>
+    </div>
+
+    <div class="year-heading">2021</div>
+
+    <div class="pub-card">
+      <p>
+        <span class="pub-number">2.</span>
+        <strong>Sawant, S.</strong>; Arvind, C.; Joshi, V.; & Robin, V. V. (December 2021).
+      </p>
+      <p class="pub-title">Song Richness Index: A measure to understand the diversity and repetition of notes in a birdsong.</p>
+      <p><span class="pub-journal">bioRxiv.</span></p>
+      <p class="pub-link"><a href="https://doi.org/10.1101/2021.12.18.472638" target="_blank">https://doi.org/10.1101/2021.12.18.472638</a></p>
+      <div class="pub-meta">
+        <div class="altmetric-embed" data-badge-type="donut" data-badge-details="right" data-doi="10.1101/2021.12.18.472638"></div>
+      </div>
+    </div>
+
+    <div class="year-heading">2019</div>
+
+    <div class="pub-card">
+      <p>
+        <span class="pub-number">1.</span>
+        <strong>Sawant, S.</strong> (June 2019).
+      </p>
+      <p class="pub-title">Grasshopper Warbler <em>Locustella naevia</em> in Andhra Pradesh.</p>
+      <p><span class="pub-journal">Indian BIRDS.</span></p>
+      <p class="pub-link"><a href="http://indianbirds.in/pdfs/IB_15_2_Sawant_GrasshopperWarbler.pdf" target="_blank">http://indianbirds.in/pdfs/IB_15_2_Sawant_GrasshopperWarbler.pdf</a></p>
+    </div>
+
+  </div>
+</div>
+
+<script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 ```

@@ -1,1 +1,152 @@
 /* css styles */
+.research-page {
+  background-color: #5b6f5e;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: -2rem;
+}
+
+.research-hero {
+  background-color: #f4efe4;
+  color: #111;
+  padding-bottom: 2rem;
+}
+
+.research-hero h1 {
+  background-color: #5b6f5e;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 1.2rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.hero-systems {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding: 1.8rem 2rem 0.5rem;
+  flex-wrap: wrap;
+}
+
+.system-card {
+  position: relative;
+  width: 360px;
+  min-height: 220px;
+}
+
+.system-img {
+  width: 230px;
+  height: 170px;
+  object-fit: cover;
+}
+
+.species-img {
+  position: absolute;
+  right: 0;
+  top: 75px;
+  width: 115px;
+  height: 110px;
+  object-fit: cover;
+}
+
+.system-label {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.map-icon {
+  position: absolute;
+  right: 25px;
+  top: 45px;
+  width: 65px;
+}
+
+.species-name {
+  position: absolute;
+  right: 5px;
+  top: 185px;
+  width: 130px;
+  font-size: 0.65rem;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.research-themes {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+  padding: 2rem 1.4rem 2.5rem;
+}
+
+.theme-card {
+  text-align: center;
+  position: relative;
+}
+
+.theme-number {
+  width: 28px;
+  height: 28px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: -0.8rem auto 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 28px;
+}
+
+.theme-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 2px solid #111;
+  background-color: #f4efe4;
+}
+
+.theme-card h3 {
+  font-size: 0.85rem;
+  margin: 0.8rem 0 0.4rem;
+  line-height: 1.1;
+  color: white;
+}
+
+.theme-card p {
+  font-size: 0.72rem;
+  line-height: 1.2;
+  margin: 0;
+  color: #f4efe4;
+}
+
+/* Responsive layout */
+@media (max-width: 1100px) {
+  .research-themes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .research-page {
+    margin: -1rem;
+  }
+
+  .hero-systems {
+    gap: 2rem;
+  }
+
+  .system-card {
+    width: 300px;
+  }
+
+  .system-img {
+    width: 200px;
+  }
+
+  .research-themes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

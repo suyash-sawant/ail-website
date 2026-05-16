@@ -19,5 +19,23 @@
   },
   "media.qmd": {
     "media.html": "f15b802a"
+  },
+  "avian-information-landscapes.qmd": {
+    "avian-information-landscapes.html": "a417fd87"
+  },
+  "evolution-birdsong.qmd": {
+    "evolution-birdsong.html": "5fc77ba3"
+  },
+  "functional-vocal-complexity.qmd": {
+    "functional-vocal-complexity.html": "96c0a5da"
+  },
+  "mixed-species-flocks-social-interactions.qmd": {
+    "mixed-species-flocks-social-interactions.html": "e23e7097"
+  },
+  "natural-history.qmd": {
+    "natural-history.html": "5c792042"
+  },
+  "structural-vocal-complexity.qmd": {
+    "structural-vocal-complexity.html": "c6a017ce"
   }
 }
