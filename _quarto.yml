@@ -24,3 +24,4 @@ format:
   html:
     theme: cosmo
     css: styles.scss
+    include-in-header: google-verification.html
