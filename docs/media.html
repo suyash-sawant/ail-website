@@ -68,6 +68,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="google-site-verification" content="S3y3RYH9ADRsEYw4P3dmOwLfZuhDUaX41Dit0n2a9g4">
+
 
 
 <link rel="stylesheet" href="styles.scss">
@@ -145,25 +147,996 @@ ul.task-list li input[type="checkbox"] {
 
 
 <style>
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;  /* makes spacing even */
-  gap: 6px;                        /* spacing between images */
+
+/* =========================================================
+   MEDIA PAGE
+   ========================================================= */
+
+.media-intro {
+  max-width: 850px;
+  margin: 0 auto 2.5rem auto;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
-.gallery img {
-  width: calc(33.33% - 6px);       /* 3 columns */
-  height: auto;
-  border-radius: 6px;               /* optional */
-  object-fit: cover;
+
+/* YEAR HEADINGS */
+
+.media-year {
+  margin-top: 3.2rem;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.35);
+  font-size: 1.8rem;
+  font-weight: 600;
 }
+
+
+/* =========================================================
+   GALLERY GRID
+   ========================================================= */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+
+/* =========================================================
+   INDIVIDUAL IMAGE CARD
+   ========================================================= */
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #111;
+  aspect-ratio: 4 / 3;
+  cursor: default;
+}
+
+
+/* IMAGE */
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+
+  /* Smooth hover effect */
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+
+/* Slight zoom when hovering */
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+  filter: brightness(0.45);
+}
+
+
+/* =========================================================
+   CAPTION OVERLAY
+   ========================================================= */
+
+.gallery-caption {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 1rem;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.90) 0%,
+      rgba(0, 0, 0, 0.65) 45%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+/* Show caption on hover */
+
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+}
+
+
+/* Caption heading */
+
+.gallery-caption h3 {
+  color: white;
+  margin: 0 0 0.35rem 0;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  font-weight: 650;
+}
+
+
+/* Caption text */
+
+.gallery-caption p {
+  color: rgba(255, 255, 255, 0.94);
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+
+/* Photo credit */
+
+.gallery-caption .credit {
+  margin-top: 0.4rem;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================================================
+   RESPONSIVE LAYOUT
+   ========================================================= */
+
+/* Smaller laptops */
+@media (max-width: 1200px) {
+  .gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* Tablets */
+@media (max-width: 800px) {
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* Phones */
+@media (max-width: 520px) {
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  /*
+    Phones do not have hover, so captions remain visible.
+  */
+
+  .gallery-caption {
+    opacity: 1;
+    background:
+      linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.88) 0%,
+        rgba(0, 0, 0, 0.45) 55%,
+        transparent 100%
+      );
+  }
+
+}
+
+/* =========================================================
+   MAKE MEDIA PAGE WIDER
+   ========================================================= */
+
+/* Override Quarto's normal constrained content width */
+#quarto-content,
+main.content {
+  max-width: none !important;
+}
+
+/* Main media content width */
+main.content {
+  width: 92vw !important;
+  margin-left: calc(50% - 46vw) !important;
+  margin-right: calc(50% - 46vw) !important;
+}
+
+/* Keep introductory text readable */
+.media-intro {
+  max-width: 850px;
+  margin: 0 auto 2.5rem auto;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
 </style>
-<p>Coming soon…</p>
+<!-- ======================================================
+     2026
+     ====================================================== -->
+<h2 class="media-year anchored">
+<p>2026</p>
+</h2>
 <div class="gallery">
-<p><img src="A01.jpg" class="img-fluid"> <img src="A02.jpg" class="img-fluid"> <img src="A03.jpg" class="img-fluid"></p>
-<p><img src="A04.jpg" class="img-fluid"> <img src="A05.jpg" class="img-fluid"> <img src="A06.jpg" class="img-fluid"></p>
-<p><img src="A07.jpg"> <img src="A08.jpg"> <img src="A09.jpg"></p>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M40_SECAB2026.jpeg" class="img-fluid figure-img"></p>
+<figcaption>SeCAB 2026</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+SeCAB, Knoxville — September 2026
+</h3>
+<p>
+Talking about social communication in mixed-species bird flocks at the 2026 Southeastern Conference for Animal Behavior (SeCAB) at the University of Tennessee, Knoxville.
+</p>
+<div class="credit">
+<p>Photo: Sidd Satishchandran</p>
+</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M39_ABS2026.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Animal Behavior Society 2026</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Animal Behavior Society, Cincinnati — August 2026
+</h3>
+<p>
+With Dr.&nbsp;Todd Freeberg, Dr.&nbsp;Brittanny Coppinger, Dr.&nbsp;Katie Sieving, Dr.&nbsp;Jeff Lucas, Dr.&nbsp;Alejandro Vélez Meléndez, and Po-an Chen at the 2026 Animal Behavior Society meeting in Cincinnati, Ohio.
+</p>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M38_Titmouse2026.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Color-banded Tufted Titmouse</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Ordway-Swisher Biological Station — March 2026
+</h3>
+<p>
+A recently banded Tufted Titmouse (<em>Baeolophus bicolor</em>) looking thoroughly unimpressed with its new green color band at Ordway-Swisher Biological Station.
+</p>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M37_AvianTechniques_1_2026.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Avian Field Techniques class</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Ordway-Swisher Biological Station — March 2026
+</h3>
+<p>
+Demonstrating mist-netting and bird-handling techniques for UF undergraduate students during Dr.&nbsp;Katie Sieving’s Avian Field Techniques course.
+</p>
+<div class="credit">
+<p>Photo: Katie Sieving</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ======================================================
+     2025
+     ====================================================== -->
+<h2 class="media-year anchored">
+<p>2025</p>
+</h2>
+<div class="gallery">
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M36_TallTimbers2025.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Autonomous recording unit at Tall Timbers</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Tall Timbers Research Station — October 2025
+</h3>
+<p>
+An autonomous recording unit deployed at Livingston Place to record winter mixed-species flocks as part of our long-term monitoring of flock communities across a latitudinal gradient in the southeastern United States.
+</p>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M35_SNRE2025.jpg" class="img-fluid figure-img"></p>
+<figcaption>SNRE Symposium 2025</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+SNRE Symposium — October 2025
+</h3>
+<p>
+Discussing my mixed-species flock research with my committee member, Dr.&nbsp;Miguel Acevedo, at the 2025 UF School of Natural Resources and Environment Annual Symposium.
+</p>
+<div class="credit">
+<p>Photo: Yukti Taneja</p>
+</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M34_JonesCenter2025.jpeg" class="img-fluid figure-img"></p>
+<figcaption>ARU deployment at Jones Center</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Jones Center at Ichauway — September 2025
+</h3>
+<p>
+Helping Dr.&nbsp;David Mason’s lab deploy autonomous recording units at the Jones Center at Ichauway for a collaborative project investigating social dimensions of the “landscape of fear.”
+</p>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M33_ESA2025.jpg" class="img-fluid figure-img"></p>
+<figcaption>ESA Annual Meeting 2025</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+ESA, Baltimore — August 2025
+</h3>
+<p>
+Presenting preliminary results from my PhD research on mixed-species flock social dynamics across an urban-natural gradient at the Ecological Society of America Annual Meeting.
+</p>
+<div class="credit">
+<p>Photo: Katie Sieving</p>
+</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M32_Peradeniya2025.jpg" class="img-fluid figure-img"></p>
+<figcaption>Research Design for Field Biologists course</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+University of Peradeniya — May 2025
+</h3>
+<p>
+Teaching a session on study design during the <em>Research Design for Field Biologists</em> short course at the University of Peradeniya, Sri Lanka.
+</p>
+<div class="credit">
+<p>Photo: Katie Sieving</p>
+</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M31_Gainesville2025.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Bird feeder experiment in Gainesville</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Gainesville — April 2025
+</h3>
+<p>
+Helping Po-an Chen with field experiments investigating how bird feeders affect mixed-species flocks, alongside Sidd Satishchandran.
+</p>
+</div>
+</div>
+</div>
+<!-- ======================================================
+     2024
+     ====================================================== -->
+<h2 class="media-year anchored">
+<p>2024</p>
+</h2>
+<div class="gallery">
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M30_BivensArm2024.jpg" class="img-fluid figure-img"></p>
+<figcaption>Mixed-species flock fieldwork</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Bivens Arm Nature Park — November 2024
+</h3>
+<p>
+Collecting field data on mixed-species bird flocks at Bivens Arm Nature Park in Gainesville as part of my urban-natural gradient study.
+</p>
+<div class="credit">
+<p>Photo: Yukti Taneja</p>
+</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M29_SNRE2024.png" class="img-fluid figure-img"></p>
+<figcaption>SNRE Symposium 2024</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+SNRE Symposium — November 2024
+</h3>
+<p>
+Presenting my PhD research plan on the social dynamics and vocal communication of mixed-species bird flocks at the 2024 UF School of Natural Resources and Environment Annual Symposium.
+</p>
+<div class="credit">
+<p>Photo: Katie Sieving</p>
+</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M28_Gainesville2024.jpg" class="img-fluid figure-img"></p>
+<figcaption>Mixed-species flock field sampling</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Gainesville — September 2024
+</h3>
+<p>
+Working out field-sampling protocols with Dr.&nbsp;Katie Sieving for my PhD research on the social dynamics and vocal communication of mixed-species flocks across an urban-natural gradient.
+</p>
+<div class="credit">
+<p>Photo: Katie Sieving</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ======================================================
+     2023
+     ====================================================== -->
+<h2 class="media-year anchored">
+<p>2023</p>
+</h2>
+<div class="gallery">
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M27_SievingLab2023.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Sieving Lab</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Sieving Lab — November 2023
+</h3>
+<p>
+Wrapping up my first semester at UF with the Sieving Lab—a new lab and the beginning of my PhD fieldwork.
+</p>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M26_Ocala2023.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Field recording in Ocala National Forest</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Ocala National Forest — October 2023
+</h3>
+<p>
+Figuring out field recording equipment with Dr.&nbsp;Katie Sieving in Ocala National Forest during my first semester at the University of Florida.
+</p>
+<div class="credit">
+<p>Photo: Talha Mohammad</p>
+</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M25_FOS2023.jpg" class="img-fluid figure-img"></p>
+<figcaption>Florida Ornithological Society Fall Meeting</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Florida Ornithological Society — October 2023
+</h3>
+<p>
+My first scientific meeting after moving to the United States for my PhD: presenting on tools for studying avian communication at the Florida Ornithological Society Fall Meeting in St.&nbsp;Petersburg, Florida.
+</p>
+<div class="credit">
+<p>Photo: Talha Mohammad</p>
+</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M24_ATBC2023.jpeg" class="img-fluid figure-img"></p>
+<figcaption>ATBC 2023 presentation</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+ATBC, Coimbatore — June 2023
+</h3>
+<p>
+Presenting three years of research on song complexity and song sharing in White-bellied Sholakilis at ATBC 2023.
+</p>
+<div class="credit">
+<p>Photo: Orlando Acevedo-Charry</p>
+</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M23_ATBCWorkshop2023.jpg" class="img-fluid figure-img"></p>
+<figcaption>ATBC bioacoustics workshop</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+ATBC, Coimbatore — June 2023
+</h3>
+<p>
+Co-teaching a session on bird bioacoustics with Chiti Arvind during a bioacoustics workshop at the Association for Tropical Biology and Conservation meeting.
+</p>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M22_Devikulam2023.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Devikulam field team</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Devikulam — March 2023
+</h3>
+<p>
+Our field team after a week of intensive bird banding and blood sampling in a shola patch near Devikulam, Kerala, as part of projects on avian malaria and cultural evolution in White-bellied Sholakilis.
+</p>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M21_PampadumShola2023.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Fieldwork at Pampadum Shola National Park</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Pampadum Shola National Park — March 2023
+</h3>
+<p>
+Carrying what remained of our mist nets and poles after a rogue elephant decided to investigate—and play with—our equipment overnight during intensive bird banding and blood sampling.
+</p>
+<div class="credit">
+<p>Photo: Ashwin Warudkar</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ======================================================
+     2022
+     ====================================================== -->
+<h2 class="media-year anchored">
+<p>2022</p>
+</h2>
+<div class="gallery">
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M20_Restoration2022.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Shola habitat restoration surveys</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Berijam, TN — December 2022
+</h3>
+<p>
+Vegetation surveys with the Tamil Nadu Forest Department, supporting efforts to remove invasive woody species and restore native shola-grassland habitats.
+</p>
+<div class="credit">
+<p>Photo: Aparna Rao</p>
+</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M19_Highwavys2022.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Shola forest canopy</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Highwavys — November 2022
+</h3>
+<p>
+Sunlight filtering through the dense canopy of a shola forest near Highwavys, along the Kerala–Tamil Nadu border.
+</p>
+<div class="credit">
+<p>Photo: Vinay K. L.</p>
+</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M18_WesternGhats2022.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Searching for White-bellied Sholakilis</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Southern Western Ghats — November 2022
+</h3>
+<p>
+A long journey through the shola patches of the southern Anamalai and Meghamalai Hills with Vinay K. L. and Chiti Arvind, searching for White-bellied Sholakili populations.
+</p>
+<div class="credit">
+<p>Photo: Vinay K. L.</p>
+</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M17_NSAB2022.jpeg" class="img-fluid figure-img"></p>
+<figcaption>NSAB 2022</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+NSAB, Gaya — November 2022
+</h3>
+<p>
+Presenting our work on song sharing in White-bellied Sholakilis at the National Symposium on Avian Biology 2022 in Gaya, Bihar.
+</p>
+<div class="credit">
+<p>Photo: Chiti Arvind</p>
+</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M16_BirdLab2022.jpeg" class="img-fluid figure-img"></p>
+<figcaption>IISER Tirupati Bird Lab</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+IISER Tirupati Bird Lab — September 2022
+</h3>
+<p>
+A lab outing with the IISER Tirupati Bird Lab, led by Dr.&nbsp;V. V. Robin—a group that shaped much of my early work in bird ecology and bioacoustics.
+</p>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M15_BirdAtlas2022.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Tirupati Bird Atlas</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Tirupati — September 2022
+</h3>
+<p>
+Exploring the landscapes around Tirupati while surveying for the first Tirupati Bird Atlas.
+</p>
+<div class="credit">
+<p>Photo: Raja Bandi</p>
+</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M14_IISERDegree2022.jpeg" class="img-fluid figure-img"></p>
+<figcaption>IISER Tirupati convocation</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+IISER Tirupati — July 2022
+</h3>
+<p>
+Receiving my BS–MS dual degrees from Prof.&nbsp;K. N. Ganesh at the third convocation of IISER Tirupati.
+</p>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M13_Yellow2022.JPG" class="img-fluid figure-img"></p>
+<figcaption>Yellow, a color-banded White-bellied Sholakili</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Yellow — Kodaikanal, June 2022
+</h3>
+<p>
+In memory of my little field buddy, <strong>Yellow (2018–2024)</strong>—a color-banded White-bellied Sholakili (<em>Sholicola albiventris</em>) who lived around our field station and became an integral part of our long-term research.
+</p>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M12_SholakiliRecording2022.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Recording White-bellied Sholakilis</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Kodaikanal — June 2022
+</h3>
+<p>
+Recording color-banded White-bellied Sholakilis in Kodaikanal, with some field assistance from our dog, Sky.
+</p>
+<div class="credit">
+<p>Photo: Harikrishnan C. P.</p>
+</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M11_EasternGhats2022.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Eastern Ghats scrubland</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Eastern Ghats — April 2022
+</h3>
+<p>
+The vast open scrublands near Tirupati, Andhra Pradesh, with the Seshachalam Hills rising in the background—home to a remarkable and highly threatened bird community.
+</p>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M10_JerdonsCourser2022.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Jerdon’s Courser reconnaissance survey</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Eastern Ghats — April 2022
+</h3>
+<p>
+Reconnaissance surveys with Raja Bandi and Viral Joshi, scouting sites for a long-term passive acoustic monitoring project focused on the Critically Endangered Jerdon’s Courser.
+</p>
+</div>
+</div>
+</div>
+<!-- ======================================================
+     2021
+     ====================================================== -->
+<h2 class="media-year anchored">
+<p>2021</p>
+</h2>
+<div class="gallery">
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M09_BombayShola2021.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Color-banding White-bellied Sholakilis</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Bombay Shola — June 2021
+</h3>
+<p>
+Color-banding White-bellied Sholakilis with Harikrishnan C. P. and Viral Joshi as part of our long-term study of the population.
+</p>
+<div class="credit">
+<p>Photo: Viral Joshi</p>
+</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M08_FirstBird2021.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Juvenile Indian Blackbird</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Kodaikanal — May 2021
+</h3>
+<p>
+The first bird I ever banded was a juvenile Indian Blackbird (<em>Turdus simillimus</em>) during fieldwork in the Western Ghats.
+</p>
+<div class="credit">
+<p>Photo: Viral Joshi</p>
+</div>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M07_PalaniHills2021.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Shola sky islands in the Palani Hills</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Palani Hills — January 2021
+</h3>
+<p>
+Shola sky islands in the Palani Hills: mountaintops emerging above a blanket of clouds, with introduced <em>Pinus</em> spreading across the foreground landscape.
+</p>
+</div>
+</div>
+</div>
+<!-- ======================================================
+     2020
+     ====================================================== -->
+<h2 class="media-year anchored">
+<p>2020</p>
+</h2>
+<div class="gallery">
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M06_FieldStation2020.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Bird Lab at Kodaikanal Field Station</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Kodaikanal Field Station — December 2020
+</h3>
+<p>
+An intense scientific discussion about <strong>what’s for dinner?</strong> Kitchen talks with members of the Bird Lab at our field station in Kodaikanal.
+</p>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M05_Kodaikanal2020.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Recording White-bellied Sholakilis</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Kodaikanal — December 2020
+</h3>
+<p>
+Back in the field after the pandemic lockdowns, recording White-bellied Sholakilis (<em>Sholicola albiventris</em>) in the shola forests around Kodaikanal, Tamil Nadu.
+</p>
+<div class="credit">
+<p>Photo: Viral Joshi</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ======================================================
+     2019
+     ====================================================== -->
+<h2 class="media-year anchored">
+<p>2019</p>
+</h2>
+<div class="gallery">
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M04_NSAB2019.jpg" class="img-fluid figure-img"></p>
+<figcaption>NSAB 2019 poster presentation</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+NSAB, Tirupati — December 2019
+</h3>
+<p>
+My first scientific poster presentation at the National Symposium on Avian Biology: developing quantitative tools to measure bird song complexity. The poster received third prize.
+</p>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M03_Cornell2019.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Cornell Lab of Ornithology</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Cornell Lab of Ornithology — July 2019
+</h3>
+<p>
+At the Cornell Lab of Ornithology during a six-week summer internship at the K. Lisa Yang Center for Conservation Bioacoustics, working with Harikrishnan C. P.
+</p>
+</div>
+</div>
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M02_Kodaikanal2019.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Kodaikanal Ecology Field Station</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Kodaikanal — May 2019
+</h3>
+<p>
+The Kodaikanal International School–IISER Tirupati Ecology Field Station in the Palani Hills, Tamil Nadu—the home base for much of my early fieldwork in the shola forests.
+</p>
+</div>
+</div>
+</div>
+<!-- ======================================================
+     2018
+     ====================================================== -->
+<h2 class="media-year anchored">
+<p>2018</p>
+</h2>
+<div class="gallery">
+<div class="gallery-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/M01_ArunachalPradesh2018.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Field internship at Eaglenest Wildlife Sanctuary</figcaption>
+</figure>
+</div>
+<div class="gallery-caption">
+<h3 class="anchored">
+Arunachal Pradesh — June 2018
+</h3>
+<p>
+My first field internship—and my introduction to field ecology—studying moths with Dr.&nbsp;Ramana Athreya in Eaglenest Wildlife Sanctuary, Arunachal Pradesh. Pictured with Sachin and local field assistants.
+</p>
+<div class="credit">
+<p>Photo: Sachin</p>
+</div>
+</div>
+</div>
 </div>
 
 
