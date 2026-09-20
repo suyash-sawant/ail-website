@@ -8,6 +8,14 @@ format:
 ```{=html}
 <style>
 
+/* Center Media page title */
+#title-block-header h1,
+.quarto-title h1,
+.title h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
 /* =========================================================
    MEDIA PAGE
    ========================================================= */
@@ -32,6 +40,10 @@ format:
   font-weight: 600;
 }
 
+/* Remove Quarto heading anchor/link icons */
+a.anchorjs-link {
+  display: none !important;
+}
 
 /* =========================================================
    GALLERY GRID
@@ -236,7 +248,7 @@ main.content {
 
 ::::::::::::: gallery
 ::::: gallery-item
-![SeCAB 2026](images/M40_SECAB2026.jpeg){alt="SeCAB 2026"}
+![SeCAB 2026](images/M40_SECAB2026.jpeg)
 
 :::: gallery-caption
 <h3>SeCAB, Knoxville — September 2026</h3>
@@ -250,7 +262,7 @@ Photo: Sidd Satishchandran
 :::::
 
 :::: gallery-item
-![Animal Behavior Society 2026](images/M39_ABS2026.jpeg){alt="Animal Behavior Society 2026"}
+![Animal Behavior Society 2026](images/M39_ABS2026.jpeg)
 
 ::: gallery-caption
 <h3>Animal Behavior Society, Cincinnati — August 2026</h3>
@@ -260,7 +272,7 @@ Photo: Sidd Satishchandran
 ::::
 
 :::: gallery-item
-![Color-banded Tufted Titmouse](images/M38_Titmouse2026.jpeg){alt="Color-banded Tufted Titmouse"}
+![Color-banded Tufted Titmouse](images/M38_Titmouse2026.jpeg)
 
 ::: gallery-caption
 <h3>Ordway-Swisher Biological Station — March 2026</h3>
@@ -270,7 +282,7 @@ Photo: Sidd Satishchandran
 ::::
 
 ::::: gallery-item
-![Avian Field Techniques class](images/M37_AvianTechniques_1_2026.jpeg){alt="Avian Field Techniques class"}
+![Avian Field Techniques class](images/M37_AvianTechniques_1_2026.jpeg)
 
 :::: gallery-caption
 <h3>Ordway-Swisher Biological Station — March 2026</h3>
@@ -298,7 +310,7 @@ Photo: Katie Sieving
 
 :::::::::::::::::: gallery
 :::: gallery-item
-![Autonomous recording unit at Tall Timbers](images/M36_TallTimbers2025.jpeg){alt="Autonomous recording unit at Tall Timbers"}
+![Autonomous recording unit at Tall Timbers](images/M36_TallTimbers2025.jpeg)
 
 ::: gallery-caption
 <h3>Tall Timbers Research Station — October 2025</h3>
@@ -308,7 +320,7 @@ Photo: Katie Sieving
 ::::
 
 ::::: gallery-item
-![SNRE Symposium 2025](images/M35_SNRE2025.jpg){alt="SNRE Symposium 2025"}
+![SNRE Symposium 2025](images/M35_SNRE2025.jpg)
 
 :::: gallery-caption
 <h3>SNRE Symposium — October 2025</h3>
@@ -322,7 +334,7 @@ Photo: Yukti Taneja
 :::::
 
 :::: gallery-item
-![ARU deployment at Jones Center](images/M34_JonesCenter2025.jpeg){alt="ARU deployment at Jones Center"}
+![ARU deployment at Jones Center](images/M34_JonesCenter2025.jpeg)
 
 ::: gallery-caption
 <h3>Jones Center at Ichauway — September 2025</h3>
@@ -332,7 +344,7 @@ Photo: Yukti Taneja
 ::::
 
 ::::: gallery-item
-![ESA Annual Meeting 2025](images/M33_ESA2025.jpg){alt="ESA Annual Meeting 2025"}
+![ESA Annual Meeting 2025](images/M33_ESA2025.jpg)
 
 :::: gallery-caption
 <h3>ESA, Baltimore — August 2025</h3>
@@ -346,7 +358,7 @@ Photo: Katie Sieving
 :::::
 
 ::::: gallery-item
-![Research Design for Field Biologists course](images/M32_Peradeniya2025.jpg){alt="Research Design for Field Biologists course"}
+![Research Design for Field Biologists course](images/M32_Peradeniya2025.jpg)
 
 :::: gallery-caption
 <h3>University of Peradeniya — May 2025</h3>
@@ -360,7 +372,7 @@ Photo: Katie Sieving
 :::::
 
 :::: gallery-item
-![Bird feeder experiment in Gainesville](images/M31_Gainesville2025.jpeg){alt="Bird feeder experiment in Gainesville"}
+![Bird feeder experiment in Gainesville](images/M31_Gainesville2025.jpeg)
 
 ::: gallery-caption
 <h3>Gainesville — April 2025</h3>
@@ -384,7 +396,7 @@ Photo: Katie Sieving
 
 :::::::::::: gallery
 ::::: gallery-item
-![Mixed-species flock fieldwork](images/M30_BivensArm2024.jpg){alt="Mixed-species flock fieldwork"}
+![Mixed-species flock fieldwork](images/M30_BivensArm2024.jpg)
 
 :::: gallery-caption
 <h3>Bivens Arm Nature Park — November 2024</h3>
@@ -398,7 +410,7 @@ Photo: Yukti Taneja
 :::::
 
 ::::: gallery-item
-![SNRE Symposium 2024](images/M29_SNRE2024.jpg){alt="SNRE Symposium 2024"}
+![SNRE Symposium 2024](images/M29_SNRE2024.jpg)
 
 :::: gallery-caption
 <h3>SNRE Symposium — November 2024</h3>
@@ -412,7 +424,7 @@ Photo: Katie Sieving
 :::::
 
 ::::: gallery-item
-![Mixed-species flock field sampling](images/M28_Gainesville2024.jpg){alt="Mixed-species flock field sampling"}
+![Mixed-species flock field sampling](images/M28_Gainesville2024.jpg)
 
 :::: gallery-caption
 <h3>Gainesville — September 2024</h3>
@@ -440,7 +452,7 @@ Photo: Katie Sieving
 
 ::::::::::::::::::::: gallery
 :::: gallery-item
-![Sieving Lab](images/M27_SievingLab2023.jpeg){alt="Sieving Lab"}
+![Sieving Lab](images/M27_SievingLab2023.jpeg)
 
 ::: gallery-caption
 <h3>Sieving Lab — November 2023</h3>
@@ -450,7 +462,7 @@ Photo: Katie Sieving
 ::::
 
 ::::: gallery-item
-![Field recording in Ocala National Forest](images/M26_Ocala2023.jpeg){alt="Field recording in Ocala National Forest"}
+![Field recording in Ocala National Forest](images/M26_Ocala2023.jpeg)
 
 :::: gallery-caption
 <h3>Ocala National Forest — October 2023</h3>
@@ -464,7 +476,7 @@ Photo: Talha Mohammad
 :::::
 
 ::::: gallery-item
-![Florida Ornithological Society Fall Meeting](images/M25_FOS2023.jpg){alt="Florida Ornithological Society Fall Meeting"}
+![Florida Ornithological Society Fall Meeting](images/M25_FOS2023.jpg)
 
 :::: gallery-caption
 <h3>Florida Ornithological Society — October 2023</h3>
@@ -478,7 +490,7 @@ Photo: Talha Mohammad
 :::::
 
 ::::: gallery-item
-![ATBC 2023 presentation](images/M24_ATBC2023.jpeg){alt="ATBC 2023 presentation"}
+![ATBC 2023 presentation](images/M24_ATBC2023.jpeg)
 
 :::: gallery-caption
 <h3>ATBC, Coimbatore — June 2023</h3>
@@ -492,7 +504,7 @@ Photo: Orlando Acevedo-Charry
 :::::
 
 :::: gallery-item
-![ATBC bioacoustics workshop](images/M23_ATBCWorkshop2023.jpg){alt="ATBC bioacoustics workshop"}
+![ATBC bioacoustics workshop](images/M23_ATBCWorkshop2023.jpg)
 
 ::: gallery-caption
 <h3>ATBC, Coimbatore — June 2023</h3>
@@ -502,7 +514,7 @@ Photo: Orlando Acevedo-Charry
 ::::
 
 :::: gallery-item
-![Devikulam field team](images/M22_Devikulam2023.jpeg){alt="Devikulam field team"}
+![Devikulam field team](images/M22_Devikulam2023.jpeg)
 
 ::: gallery-caption
 <h3>Devikulam — March 2023</h3>
@@ -512,7 +524,7 @@ Photo: Orlando Acevedo-Charry
 ::::
 
 ::::: gallery-item
-![Fieldwork at Pampadum Shola National Park](images/M21_PampadumShola2023.jpeg){alt="Fieldwork at Pampadum Shola National Park"}
+![Fieldwork at Pampadum Shola National Park](images/M21_PampadumShola2023.jpeg)
 
 :::: gallery-caption
 <h3>Pampadum Shola National Park — March 2023</h3>
@@ -540,7 +552,7 @@ Photo: Ashwin Warudkar
 
 ::::::::::::::::::::::::::::::: gallery
 ::::: gallery-item
-![Shola habitat restoration surveys](images/M20_Restoration2022.jpeg){alt="Shola habitat restoration surveys"}
+![Shola habitat restoration surveys](images/M20_Restoration2022.jpeg)
 
 :::: gallery-caption
 <h3>Berijam, TN — December 2022</h3>
@@ -554,7 +566,7 @@ Photo: Aparna Rao
 :::::
 
 ::::: gallery-item
-![Shola forest canopy](images/M19_Highwavys2022.jpeg){alt="Shola forest canopy"}
+![Shola forest canopy](images/M19_Highwavys2022.jpeg)
 
 :::: gallery-caption
 <h3>Highwavys — November 2022</h3>
@@ -568,7 +580,7 @@ Photo: Vinay K. L.
 :::::
 
 ::::: gallery-item
-![Searching for White-bellied Sholakilis](images/M18_WesternGhats2022.jpeg){alt="Searching for White-bellied Sholakilis"}
+![Searching for White-bellied Sholakilis](images/M18_WesternGhats2022.jpeg)
 
 :::: gallery-caption
 <h3>Southern Western Ghats — November 2022</h3>
@@ -582,7 +594,7 @@ Photo: Vinay K. L.
 :::::
 
 ::::: gallery-item
-![NSAB 2022](images/M17_NSAB2022.jpeg){alt="NSAB 2022"}
+![NSAB 2022](images/M17_NSAB2022.jpeg)
 
 :::: gallery-caption
 <h3>NSAB, Gaya — November 2022</h3>
@@ -596,7 +608,7 @@ Photo: Chiti Arvind
 :::::
 
 :::: gallery-item
-![IISER Tirupati Bird Lab](images/M16_BirdLab2022.jpeg){alt="IISER Tirupati Bird Lab"}
+![IISER Tirupati Bird Lab](images/M16_BirdLab2022.jpeg)
 
 ::: gallery-caption
 <h3>IISER Tirupati Bird Lab — September 2022</h3>
@@ -606,7 +618,7 @@ Photo: Chiti Arvind
 ::::
 
 ::::: gallery-item
-![Tirupati Bird Atlas](images/M15_BirdAtlas2022.jpeg){alt="Tirupati Bird Atlas"}
+![Tirupati Bird Atlas](images/M15_BirdAtlas2022.jpeg)
 
 :::: gallery-caption
 <h3>Tirupati — September 2022</h3>
@@ -620,7 +632,7 @@ Photo: Raja Bandi
 :::::
 
 :::: gallery-item
-![IISER Tirupati convocation](images/M14_IISERDegree2022.jpeg){alt="IISER Tirupati convocation"}
+![IISER Tirupati convocation](images/M14_IISERDegree2022.jpeg)
 
 ::: gallery-caption
 <h3>IISER Tirupati — July 2022</h3>
@@ -630,7 +642,7 @@ Photo: Raja Bandi
 ::::
 
 :::: gallery-item
-![Yellow, a color-banded White-bellied Sholakili](images/M13_Yellow2022.jpeg){alt="Yellow, a color-banded White-bellied Sholakili"}
+![Yellow, a color-banded White-bellied Sholakili](images/M13_Yellow2022.jpeg)
 
 ::: gallery-caption
 <h3>Yellow — Kodaikanal, June 2022</h3>
@@ -640,7 +652,7 @@ Photo: Raja Bandi
 ::::
 
 ::::: gallery-item
-![Recording White-bellied Sholakilis](images/M12_SholakiliRecording2022.jpeg){alt="Recording White-bellied Sholakilis"}
+![Recording White-bellied Sholakilis](images/M12_SholakiliRecording2022.jpeg)
 
 :::: gallery-caption
 <h3>Kodaikanal — June 2022</h3>
@@ -654,7 +666,7 @@ Photo: Harikrishnan C. P.
 :::::
 
 :::: gallery-item
-![Eastern Ghats scrubland](images/M11_EasternGhats2022.jpeg){alt="Eastern Ghats scrubland"}
+![Eastern Ghats scrubland](images/M11_EasternGhats2022.jpeg)
 
 ::: gallery-caption
 <h3>Eastern Ghats — April 2022</h3>
@@ -664,7 +676,7 @@ Photo: Harikrishnan C. P.
 ::::
 
 :::: gallery-item
-![Jerdon's Courser reconnaissance survey](images/M10_JerdonsCourser2022.jpeg){alt="Jerdon's Courser reconnaissance survey"}
+![Jerdon's Courser reconnaissance survey](images/M10_JerdonsCourser2022.jpeg)
 
 ::: gallery-caption
 <h3>Eastern Ghats — April 2022</h3>
@@ -688,7 +700,7 @@ Photo: Harikrishnan C. P.
 
 ::::::::::: gallery
 ::::: gallery-item
-![Color-banding White-bellied Sholakilis](images/M09_BombayShola2021.jpeg){alt="Color-banding White-bellied Sholakilis"}
+![Color-banding White-bellied Sholakilis](images/M09_BombayShola2021.jpeg)
 
 :::: gallery-caption
 <h3>Bombay Shola — June 2021</h3>
@@ -702,7 +714,7 @@ Photo: Viral Joshi
 :::::
 
 ::::: gallery-item
-![Juvenile Indian Blackbird](images/M08_FirstBird2021.jpeg){alt="Juvenile Indian Blackbird"}
+![Juvenile Indian Blackbird](images/M08_FirstBird2021.jpeg)
 
 :::: gallery-caption
 <h3>Kodaikanal — May 2021</h3>
@@ -716,7 +728,7 @@ Photo: Viral Joshi
 :::::
 
 :::: gallery-item
-![Shola sky islands in the Palani Hills](images/M07_PalaniHills2021.jpeg){alt="Shola sky islands in the Palani Hills"}
+![Shola sky islands in the Palani Hills](images/M07_PalaniHills2021.jpeg)
 
 ::: gallery-caption
 <h3>Palani Hills — January 2021</h3>
@@ -740,7 +752,7 @@ Photo: Viral Joshi
 
 :::::::: gallery
 :::: gallery-item
-![Bird Lab at Kodaikanal Field Station](images/M06_FieldStation2020.jpeg){alt="Bird Lab at Kodaikanal Field Station"}
+![Bird Lab at Kodaikanal Field Station](images/M06_FieldStation2020.jpeg)
 
 ::: gallery-caption
 <h3>Kodaikanal Field Station — December 2020</h3>
@@ -750,7 +762,7 @@ Photo: Viral Joshi
 ::::
 
 ::::: gallery-item
-![Recording White-bellied Sholakilis](images/M05_Kodaikanal2020.jpeg){alt="Recording White-bellied Sholakilis"}
+![Recording White-bellied Sholakilis](images/M05_Kodaikanal2020.jpeg)
 
 :::: gallery-caption
 <h3>Kodaikanal — December 2020</h3>
@@ -778,7 +790,7 @@ Photo: Viral Joshi
 
 ::::::::: gallery
 :::: gallery-item
-![NSAB 2019 poster presentation](images/M04_NSAB2019.jpg){alt="NSAB 2019 poster presentation"}
+![NSAB 2019 poster presentation](images/M04_NSAB2019.jpg)
 
 ::: gallery-caption
 <h3>NSAB, Tirupati — December 2019</h3>
@@ -788,7 +800,7 @@ Photo: Viral Joshi
 ::::
 
 :::: gallery-item
-![Cornell Lab of Ornithology](images/M03_Cornell2019.jpeg){alt="Cornell Lab of Ornithology"}
+![Cornell Lab of Ornithology](images/M03_Cornell2019.jpeg)
 
 ::: gallery-caption
 <h3>Cornell Lab of Ornithology — July 2019</h3>
@@ -798,7 +810,7 @@ Photo: Viral Joshi
 ::::
 
 :::: gallery-item
-![Kodaikanal Ecology Field Station](images/M02_Kodaikanal2019.jpeg){alt="Kodaikanal Ecology Field Station"}
+![Kodaikanal Ecology Field Station](images/M02_Kodaikanal2019.jpeg)
 
 ::: gallery-caption
 <h3>Kodaikanal — May 2019</h3>
@@ -822,7 +834,7 @@ Photo: Viral Joshi
 
 :::::: gallery
 ::::: gallery-item
-![Field internship at Eaglenest Wildlife Sanctuary](images/M01_ArunachalPradesh2018.jpeg){alt="Field internship at Eaglenest Wildlife Sanctuary"}
+![Field internship at Eaglenest Wildlife Sanctuary](images/M01_ArunachalPradesh2018.jpeg)
 
 :::: gallery-caption
 <h3>Arunachal Pradesh — June 2018</h3>
