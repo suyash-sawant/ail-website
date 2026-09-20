@@ -5,83 +5,189 @@ format: html
 
 ```{=html}
 <style>
+
+/* =========================================================
+   MAIN PAGE TITLE
+========================================================= */
+
 #title-block-header h1,
 .quarto-title h1,
 .title h1 {
   text-align: center;
+  margin-bottom: 1.5rem;
 }
+
+
+/* =========================================================
+   PUBLICATIONS PAGE — FULL WIDTH
+========================================================= */
 
 .publications-page {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  background-color: #f4efe4;
-  padding: 2rem 0 4rem 0;
 }
 
 .publications-container {
-  max-width: 1050px;
+  width: 92vw;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 2.5rem 0 4rem 0;
 }
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
 
 .year-heading {
-  background-color: #5f705f;
+  background: #5a6f5e;
   color: white;
-  padding: 0.6rem 1rem;
-  margin: 2rem 0 1rem 0;
-  font-size: 1.4rem;
-  font-weight: 800;
-  letter-spacing: 0.5px;
+
+  font-size: 1.45rem;
+  font-weight: 700;
+
+  padding: 0.8rem 1.25rem;
+
+  /* Space between major sections only */
+  margin: 2rem 0 0 0;
 }
+
+.year-heading:first-child {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   PUBLICATION ENTRIES
+========================================================= */
 
 .pub-card {
-  background-color: white;
-  border-left: 6px solid #5f705f;
-  padding: 1.2rem 1.4rem;
-  margin-bottom: 1.2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: white;
+
+  /* No gaps between publications within a section */
+  margin: 0;
+
+  padding: 1.2rem 1.5rem;
+
+  /* Green accent */
+  border-left: 5px solid #5a6f5e;
+
+  /* Subtle divider between entries */
+  border-bottom: 1px solid #ddd8cc;
+
+  box-shadow: none;
+  border-radius: 0;
+
+  /* Publication text + metrics */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
 }
 
-.pub-number {
-  font-weight: 800;
-  color: #5f705f;
-  margin-right: 0.35rem;
+.pub-content {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   PUBLICATION TEXT
+========================================================= */
+
+.pub-card p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.pub-card p:last-child {
+  margin-bottom: 0;
 }
 
 .pub-title {
   font-style: italic;
-  font-size: 1.05rem;
-  margin: 0.35rem 0;
+  margin-top: 0.55rem !important;
+}
+
+
+/* Journal + DOI / link */
+.pub-details {
+  margin-top: 0.35rem !important;
+  margin-bottom: 0 !important;
 }
 
 .pub-journal {
-  font-weight: 700;
+  font-weight: 600;
 }
 
-.pub-link a {
-  color: #5f705f;
-  font-weight: 700;
-  text-decoration: none;
+.pub-separator {
+  color: #888;
+  margin: 0 0.35rem;
 }
 
-.pub-link a:hover {
-  text-decoration: underline;
+.pub-details a {
+  overflow-wrap: anywhere;
 }
 
-.pub-meta {
-  margin-top: 0.7rem;
+
+/* =========================================================
+   METRIC BADGES
+========================================================= */
+
+.pub-badges {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+
+  min-width: 125px;
+  flex-shrink: 0;
 }
 
-@media (max-width: 700px) {
+.pub-badges .altmetric-embed,
+.pub-badges .__dimensions_badge_embed__ {
+  margin: 0 !important;
+}
+
+.pub-badges p {
+  margin: 0 !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
   .publications-container {
-    padding: 0 1.2rem;
+    width: calc(100% - 3rem);
+    padding: 2rem 0 3rem 0;
+  }
+
+  .year-heading {
+    font-size: 1.25rem;
+    padding: 0.7rem 1rem;
+    margin-top: 1.5rem;
   }
 
   .pub-card {
-    padding: 1rem;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 1.1rem 1rem;
+  }
+
+  .pub-badges {
+    justify-content: flex-start;
+    min-width: 0;
+  }
+
+  .pub-separator {
+    margin: 0 0.2rem;
   }
 }
+
 </style>
 ```
 
@@ -89,90 +195,411 @@ format: html
 <div class="publications-page">
   <div class="publications-container">
 
+
+    <!-- =====================================================
+         UNDER REVIEW
+    ====================================================== -->
+
+    <div class="year-heading">Under Review</div>
+
+
+    <div class="pub-card">
+
+      <div class="pub-content">
+
+        <p>
+          <strong>Sawant, S.</strong>; Arvind, C.; Joshi, V.; Dutta, I.; & Robin, V. V.
+        </p>
+
+        <p class="pub-title">
+          Reuse, retention, and sharing of song sequences in the complex songs of a tropical passerine.
+        </p>
+
+        <p class="pub-details">
+          <span class="pub-journal">
+            Under review at <em>The American Naturalist</em>.
+          </span>
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="pub-card">
+
+      <div class="pub-content">
+
+        <p>
+          Arvind, C.; <strong>Sawant, S.</strong>; Srinivasan, R.; Arpitha, G. P.; Goyal, N.; Warudkar, A.; & Robin, V. V.
+        </p>
+
+        <p class="pub-title">
+          Songs show strong individual-level variation and weak population-level dialects in a tropical songbird with genetic structure.
+        </p>
+
+        <p class="pub-details">
+          <span class="pub-journal">
+            Under review at <em>Proceedings of the National Academy of Sciences (PNAS)</em>.
+          </span>
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         IN PREPARATION
+    ====================================================== -->
+
+    <div class="year-heading">In Preparation</div>
+
+
+    <div class="pub-card">
+
+      <div class="pub-content">
+
+        <p>
+          <strong>Sawant, S.</strong>; Freeberg, T.; Lucas, J.; & Sieving, K.
+        </p>
+
+        <p class="pub-title">
+          From Signal Production to Reception: A Mechanistic Framework for Modeling Animal Vocal Signal Transmission.
+        </p>
+
+        <p class="pub-details">
+          <span class="pub-journal">
+            In preparation. Target journal: <em>Methods in Ecology and Evolution</em>.
+          </span>
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="pub-card">
+
+      <div class="pub-content">
+
+        <p>
+          <strong>Sawant, S.</strong>; Kimball, R.; Freeberg, T.; & Sieving, K.
+        </p>
+
+        <p class="pub-title">
+          Five Decades of Avian Vocal Complexity: Integrating Structural and Functional Dimensions.
+        </p>
+
+        <p class="pub-details">
+          <span class="pub-journal">
+            In preparation. Target journal: <em>Trends in Ecology & Evolution</em>.
+          </span>
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="pub-card">
+
+      <div class="pub-content">
+
+        <p>
+          Nair, S.; Arvind, C.; <strong>Sawant, S.</strong>; Natesh, M.; & Robin, V. V.
+        </p>
+
+        <p class="pub-title">
+          Do closely related birds also share songs? A case study of the White-bellied Sholakili <em>Sholicola albiventris</em>.
+        </p>
+
+        <p class="pub-details">
+          <span class="pub-journal">
+            In preparation.
+          </span>
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         2025
+    ====================================================== -->
+
     <div class="year-heading">2025</div>
 
-    <div class="pub-card">
-      <p>
-        <span class="pub-number">6.</span>
-        Arvind, C.; <strong>Sawant, S.</strong>; Srinivasan, R.; Arpitha, G. P.; Goyal, N.; Warudkar, A.; & Robin, V. V. (November 2025).
-      </p>
-      <p class="pub-title">Distinct, asynchronous processes underlie cultural and genetic variation in a bird species with complex song repertoires.</p>
-      <p><span class="pub-journal">bioRxiv.</span></p>
-      <p class="pub-link"><a href="https://doi.org/10.1101/2025.11.02.684965" target="_blank">https://doi.org/10.1101/2025.11.02.684965</a></p>
-      <div class="pub-meta">
-        <div class="altmetric-embed" data-badge-type="donut" data-badge-details="right" data-doi="10.1101/2025.11.02.684965"></div>
-      </div>
-    </div>
 
     <div class="pub-card">
-      <p>
-        <span class="pub-number">5.</span>
-        <strong>Sawant, S.</strong>; Arvind, C.; Joshi, V.; Dutta, I.; & Robin, V. V. (August 2025).
-      </p>
-      <p class="pub-title">Linguistic Rules of Syntax and Sharing in the Complex Songs of a Tropical Passerine.</p>
-      <p><span class="pub-journal">bioRxiv.</span></p>
-      <p class="pub-link"><a href="https://doi.org/10.1101/2025.07.31.666818" target="_blank">https://doi.org/10.1101/2025.07.31.666818</a></p>
-      <div class="pub-meta">
-        <div class="altmetric-embed" data-badge-type="donut" data-badge-details="right" data-doi="10.1101/2025.07.31.666818"></div>
+
+      <div class="pub-content">
+
+        <p>
+          <span class="pub-number">6.</span>
+          Arvind, C.; <strong>Sawant, S.</strong>; Srinivasan, R.; Arpitha, G. P.; Goyal, N.; Warudkar, A.; & Robin, V. V. (November 2025).
+        </p>
+
+        <p class="pub-title">
+          Distinct, asynchronous processes underlie cultural and genetic variation in a bird species with complex song repertoires.
+        </p>
+
+        <p class="pub-details">
+          <span class="pub-journal">bioRxiv.</span>
+          <span class="pub-separator">|</span>
+          <a href="https://doi.org/10.1101/2025.11.02.684965" target="_blank">
+            https://doi.org/10.1101/2025.11.02.684965
+          </a>
+        </p>
+
       </div>
+
+
+      <div class="pub-badges">
+
+        <div
+          class="altmetric-embed"
+          data-badge-type="donut"
+          data-doi="10.1101/2025.11.02.684965">
+        </div>
+
+        <span
+          class="__dimensions_badge_embed__"
+          data-doi="10.1101/2025.11.02.684965"
+          data-style="small_circle">
+        </span>
+
+      </div>
+
     </div>
+
+
+    <div class="pub-card">
+
+      <div class="pub-content">
+
+        <p>
+          <span class="pub-number">5.</span>
+          <strong>Sawant, S.</strong>; Arvind, C.; Joshi, V.; Dutta, I.; & Robin, V. V. (August 2025).
+        </p>
+
+        <p class="pub-title">
+          Linguistic Rules of Syntax and Sharing in the Complex Songs of a Tropical Passerine.
+        </p>
+
+        <p class="pub-details">
+          <span class="pub-journal">bioRxiv.</span>
+          <span class="pub-separator">|</span>
+          <a href="https://doi.org/10.1101/2025.07.31.666818" target="_blank">
+            https://doi.org/10.1101/2025.07.31.666818
+          </a>
+        </p>
+
+      </div>
+
+
+      <div class="pub-badges">
+
+        <div
+          class="altmetric-embed"
+          data-badge-type="donut"
+          data-doi="10.1101/2025.07.31.666818">
+        </div>
+
+        <span
+          class="__dimensions_badge_embed__"
+          data-doi="10.1101/2025.07.31.666818"
+          data-style="small_circle">
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         2024
+    ====================================================== -->
 
     <div class="year-heading">2024</div>
 
+
     <div class="pub-card">
-      <p>
-        <span class="pub-number">4.</span>
-        Kahl, S.; Denton, T.; Klinck, H.; Ramesh, V.; Joshi, V.; Srivathsa, M.; Anand, A.; Arvind, C.; Harikrishnan, C. P.; <strong>Sawant, S.</strong>; Robin, V. V.; Glotin, H.; Goëau, H.; Vellinga, W. P.; Planqué, R.; Joly, A. (September 2024).
-      </p>
-      <p class="pub-title">Overview of BirdCLEF 2024: Acoustic identification of under-studied bird species in the Western Ghats.</p>
-      <p><span class="pub-journal">Working Notes of CLEF.</span></p>
-      <p class="pub-link"><a href="https://ceur-ws.org/Vol-3740/" target="_blank">https://ceur-ws.org/Vol-3740/</a></p>
+
+      <div class="pub-content">
+
+        <p>
+          <span class="pub-number">4.</span>
+          Kahl, S.; Denton, T.; Klinck, H.; Ramesh, V.; Joshi, V.; Srivathsa, M.; Anand, A.; Arvind, C.; Harikrishnan, C. P.; <strong>Sawant, S.</strong>; Robin, V. V.; Glotin, H.; Goëau, H.; Vellinga, W. P.; Planqué, R.; Joly, A. (September 2024).
+        </p>
+
+        <p class="pub-title">
+          Overview of BirdCLEF 2024: Acoustic identification of under-studied bird species in the Western Ghats.
+        </p>
+
+        <p class="pub-details">
+          <span class="pub-journal">Working Notes of CLEF.</span>
+          <span class="pub-separator">|</span>
+          <a href="https://ceur-ws.org/Vol-3740/" target="_blank">
+            https://ceur-ws.org/Vol-3740/
+          </a>
+        </p>
+
+      </div>
+
     </div>
+
+
+    <!-- =====================================================
+         2022
+    ====================================================== -->
 
     <div class="year-heading">2022</div>
 
+
     <div class="pub-card">
-      <p>
-        <span class="pub-number">3.</span>
-        <strong>Sawant, S.</strong>; Arvind, C.; Joshi, V.; & Robin, V. V. (February 2022).
-      </p>
-      <p class="pub-title">Spectrogram cross-correlation can be used to measure the complexity of bird vocalizations.</p>
-      <p><span class="pub-journal">Methods in Ecology and Evolution.</span></p>
-      <p class="pub-link"><a href="https://doi.org/10.1111/2041-210X.13765" target="_blank">https://doi.org/10.1111/2041-210X.13765</a></p>
-      <div class="pub-meta">
-        <div class="altmetric-embed" data-badge-type="donut" data-badge-details="right" data-doi="10.1111/2041-210X.13765"></div>
+
+      <div class="pub-content">
+
+        <p>
+          <span class="pub-number">3.</span>
+          <strong>Sawant, S.</strong>; Arvind, C.; Joshi, V.; & Robin, V. V. (February 2022).
+        </p>
+
+        <p class="pub-title">
+          Spectrogram cross-correlation can be used to measure the complexity of bird vocalizations.
+        </p>
+
+        <p class="pub-details">
+          <span class="pub-journal">Methods in Ecology and Evolution.</span>
+          <span class="pub-separator">|</span>
+          <a href="https://doi.org/10.1111/2041-210X.13765" target="_blank">
+            https://doi.org/10.1111/2041-210X.13765
+          </a>
+        </p>
+
       </div>
+
+
+      <div class="pub-badges">
+
+        <div
+          class="altmetric-embed"
+          data-badge-type="donut"
+          data-doi="10.1111/2041-210X.13765">
+        </div>
+
+        <span
+          class="__dimensions_badge_embed__"
+          data-doi="10.1111/2041-210X.13765"
+          data-style="small_circle">
+        </span>
+
+      </div>
+
     </div>
+
+
+    <!-- =====================================================
+         2021
+    ====================================================== -->
 
     <div class="year-heading">2021</div>
 
+
     <div class="pub-card">
-      <p>
-        <span class="pub-number">2.</span>
-        <strong>Sawant, S.</strong>; Arvind, C.; Joshi, V.; & Robin, V. V. (December 2021).
-      </p>
-      <p class="pub-title">Song Richness Index: A measure to understand the diversity and repetition of notes in a birdsong.</p>
-      <p><span class="pub-journal">bioRxiv.</span></p>
-      <p class="pub-link"><a href="https://doi.org/10.1101/2021.12.18.472638" target="_blank">https://doi.org/10.1101/2021.12.18.472638</a></p>
-      <div class="pub-meta">
-        <div class="altmetric-embed" data-badge-type="donut" data-badge-details="right" data-doi="10.1101/2021.12.18.472638"></div>
+
+      <div class="pub-content">
+
+        <p>
+          <span class="pub-number">2.</span>
+          <strong>Sawant, S.</strong>; Arvind, C.; Joshi, V.; & Robin, V. V. (December 2021).
+        </p>
+
+        <p class="pub-title">
+          Song Richness Index: A measure to understand the diversity and repetition of notes in a birdsong.
+        </p>
+
+        <p class="pub-details">
+          <span class="pub-journal">bioRxiv.</span>
+          <span class="pub-separator">|</span>
+          <a href="https://doi.org/10.1101/2021.12.18.472638" target="_blank">
+            https://doi.org/10.1101/2021.12.18.472638
+          </a>
+        </p>
+
       </div>
+
+
+      <div class="pub-badges">
+
+        <div
+          class="altmetric-embed"
+          data-badge-type="donut"
+          data-doi="10.1101/2021.12.18.472638">
+        </div>
+
+        <span
+          class="__dimensions_badge_embed__"
+          data-doi="10.1101/2021.12.18.472638"
+          data-style="small_circle">
+        </span>
+
+      </div>
+
     </div>
+
+
+    <!-- =====================================================
+         2019
+    ====================================================== -->
 
     <div class="year-heading">2019</div>
 
+
     <div class="pub-card">
-      <p>
-        <span class="pub-number">1.</span>
-        <strong>Sawant, S.</strong> (June 2019).
-      </p>
-      <p class="pub-title">Grasshopper Warbler <em>Locustella naevia</em> in Andhra Pradesh.</p>
-      <p><span class="pub-journal">Indian BIRDS.</span></p>
-      <p class="pub-link"><a href="http://indianbirds.in/pdfs/IB_15_2_Sawant_GrasshopperWarbler.pdf" target="_blank">http://indianbirds.in/pdfs/IB_15_2_Sawant_GrasshopperWarbler.pdf</a></p>
+
+      <div class="pub-content">
+
+        <p>
+          <span class="pub-number">1.</span>
+          <strong>Sawant, S.</strong> (June 2019).
+        </p>
+
+        <p class="pub-title">
+          Grasshopper Warbler <em>Locustella naevia</em> in Andhra Pradesh.
+        </p>
+
+        <p class="pub-details">
+          <span class="pub-journal">Indian BIRDS.</span>
+          <span class="pub-separator">|</span>
+          <a href="http://indianbirds.in/pdfs/IB_15_2_Sawant_GrasshopperWarbler.pdf" target="_blank">
+            http://indianbirds.in/pdfs/IB_15_2_Sawant_GrasshopperWarbler.pdf
+          </a>
+        </p>
+
+      </div>
+
     </div>
+
 
   </div>
 </div>
 
-<script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+
+<!-- =========================================================
+     METRICS SCRIPTS
+========================================================= -->
+
+<script
+  async
+  src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js">
+</script>
+
+<script
+  async
+  src="https://badge.dimensions.ai/badge.js"
+  charset="utf-8">
+</script>
 ```
