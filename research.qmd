@@ -24,7 +24,7 @@ format:
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  background: #f7f5ef;
+  background: #f3f0e6;
   color: #1d1d1d;
 }
 
@@ -45,7 +45,7 @@ format:
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  background: #f7f5ef;
+  background: #f3f0e6;
   color: #1d1d1d;
 }
 

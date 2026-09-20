@@ -17,11 +17,10 @@ website:
         text: Research
       - href: media.qmd
         text: Media
-      - href: data.qmd
-        text: Datasets
 
 format:
   html:
-    theme: cosmo
-    css: styles.scss
+    theme:
+      - cosmo
+      - styles.scss
     include-in-header: google-verification.html

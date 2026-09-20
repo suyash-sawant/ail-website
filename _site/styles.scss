@@ -1,3 +1,11 @@
+/*-- scss:defaults --*/
+
+/* Site colors */
+$primary: #5a6f5e;
+
+
+/*-- scss:rules --*/
+
 /* Background color for the whole site */
 body {
   background-color: #f3f0e6;
@@ -5,16 +13,27 @@ body {
 
 /* Navbar background */
 .navbar {
-  background-color: #5a6f5eff !important;
+  background-color: #5a6f5e !important;
 }
 
-/* Navbar text color */
+/* Navbar text */
 .navbar .nav-link,
 .navbar-brand {
   color: white !important;
 }
 
+/* Active navbar item */
+.navbar .nav-link.active,
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: white !important;
+}
+
 /* Heading colors */
-h1, h2, h3, h4, h5 {
-  color: #5a6f5eff;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #5a6f5e;
 }

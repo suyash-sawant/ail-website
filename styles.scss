@@ -1,20 +1,33 @@
-/* Background color for the whole site */
+/*-- scss:defaults --*/
+
+$primary: #5a6f5e;
+
+
+/*-- scss:rules --*/
+
 body {
-  background-color: #f3eee2ff;
+  background-color: #f3f0e6;
 }
 
-/* Navbar background */
 .navbar {
-  background-color: #5a6f5eff !important;
+  background-color: #5a6f5e !important;
 }
 
-/* Navbar text color */
 .navbar .nav-link,
 .navbar-brand {
   color: white !important;
 }
 
-/* Heading colors */
-h1, h2, h3, h4, h5 {
-  color: #5a6f5eff;
+.navbar .nav-link.active,
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: white !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #5a6f5e;
 }
