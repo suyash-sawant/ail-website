@@ -10,11 +10,13 @@ website:
     toggle-position: right
     left:
       - href: index.qmd
-        text: About Me
-      - href: publications.qmd
-        text: Publications
+        text: About
       - href: research.qmd
         text: Research
+      - href: publications.qmd
+        text: Publications
+      - href: people.qmd
+        text: People
       - href: media.qmd
         text: Media
 

@@ -345,7 +345,7 @@ a.anchorjs-link {
       <div class="project-number">Project 01</div>
 
       <h2 class="project-title">
-        Avian Vocal Complexity: Structural and Functional Dimensions
+        Avian Vocal Complexity: Structural, Combinatorial and Functional Dimensions
       </h2>
     </div>
 
@@ -449,7 +449,7 @@ a.anchorjs-link {
 
       <div class="project-image">
         <div class="image-square">
-          <img src="images/Img_Project2.jpg"
+          <img src="images/Img_Project2.png"
                alt="Sound transmission and functional communication research">
         </div>
       </div>
@@ -517,7 +517,7 @@ a.anchorjs-link {
 
       <div class="project-image">
         <div class="image-square">
-          <img src="images/Img_Project3.jpg"
+          <img src="images/Img_Project3.png"
                alt="White-bellied Sholakili cultural evolution research">
         </div>
       </div>
